@@ -53,7 +53,7 @@ const Nav = () => {
                         </Link>
                         <Link
                             className="text-white hover:text-gray-200"
-                            onClick={() => scrollToPosition(5100)} // Scroll to 2500px from the top
+                            onClick={() => scrollToPosition(5500)} // Scroll to 2500px from the top
                         >
                             اتصل بنا
                         </Link>
@@ -66,7 +66,7 @@ const Nav = () => {
                         {/* Mobile Menu Button */}
                         <button
                             className="md:hidden text-white focus:outline-none"
-                            onClick={() => setIsOpen(!isOpen)}
+                            onClick={() => setIsOpen(!isOpen)} // Toggle menu on click
                         >
                             {isOpen ? (
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +84,7 @@ const Nav = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden  bg-[#99582A] shadow-md absolute top-16 left-0 w-full text-base flex flex-col text-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
+                <div className="md:hidden bg-[#99582A] shadow-md absolute top-16 z-50 left-0 w-full text-base flex flex-col text-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
                     <Link
                         className="block px-4 py-2 text-white font-bold relative"
                         onClick={() => scrollToPosition(0)} // Scroll to 500px from the top
@@ -111,7 +111,7 @@ const Nav = () => {
                     </Link>
                     <Link
                         className="block px-4 py-2 text-white hover:bg-[#7A4622]"
-                        onClick={() => scrollToPosition(5100)} // Scroll to 2500px from the top
+                        onClick={() => scrollToPosition(5500)} // Scroll to 2500px from the top
                     >
                         اتصل بنا
                     </Link>
